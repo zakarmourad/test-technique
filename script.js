@@ -23,7 +23,8 @@ exit_btn.onclick = ()=>{
 // Boutton continuer
 continue_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo");
-    quiz_box.classList.add("activeQuiz"); 
+    quiz_box.classList.add("activeQuiz");
+    shuffle(questions) 
     showQuetions(0);
     queCounter(1);
     startTimer(15);
@@ -64,12 +65,30 @@ restart_quiz.onclick = ()=>{
 quit_quiz.onclick = ()=>{
     window.location.reload();
 }
+// shuffle array
+function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+  }
 
 const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
 
 next_btn.onclick = ()=>{
-    if(que_count < questions.length - 1){
+    if(que_count < 4){
         que_count++; 
         que_numb++;
         showQuetions(que_count);
@@ -78,7 +97,7 @@ next_btn.onclick = ()=>{
         clearInterval(counterLine);
         startTimer(timeValue);
         startTimerLine(widthValue);
-        timeText.textContent = "Time Left";
+        timeText.textContent = "Temps restants";
         next_btn.classList.remove("show");
     }else{
         clearInterval(counter);
@@ -92,7 +111,7 @@ function showQuetions(index){
     const que_text = document.querySelector(".que_text");
 
     //Créer un selection d'affichage des questions et des options à choisir
-    let que_tag = '<span>'+ questions[index].numb + ". " + questions[index].question +'</span>';
+    let que_tag = '<span>'+ que_numb + ". " + questions[index].question +'</span>';
     let option_tag = '<div class="option"><span>'+ questions[index].options[0] +'</span></div>'
     + '<div class="option"><span>'+ questions[index].options[1] +'</span></div>'
     + '<div class="option"><span>'+ questions[index].options[2] +'</span></div>'
@@ -175,14 +194,14 @@ function startTimer(time){
         }
         if(time < 0){
             clearInterval(counter);
-            timeText.textContent = "Time Off";
+            timeText.textContent = "temps fini";
             const allOptions = option_list.children.length;
             let correcAns = questions[que_count].answer;
             for(i=0; i < allOptions; i++){
                 if(option_list.children[i].textContent == correcAns){
                     option_list.children[i].setAttribute("class", "option correct");
                     option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag);
-                    console.log("Time Off");
+                    console.log("temps fini");
                 }
             }
             for(i=0; i < allOptions; i++){
@@ -205,6 +224,6 @@ function startTimerLine(time){
 }
 
 function queCounter(index){
-    let totalQueCounTag = '<span><p>'+ index +'</p> sur <p>'+ questions.length +'</p> questions</span>';
+    let totalQueCounTag = '<span><p>'+ index +'</p> sur <p> 5</p> questions</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;
 }

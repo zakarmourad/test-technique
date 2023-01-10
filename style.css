@@ -8,7 +8,7 @@
 }
 
 body{
-    background: #007bff;
+    background: #004085;
 }
 
 ::selection{
@@ -47,6 +47,16 @@ body{
     border-radius: 5px;
     background: #fff;
     cursor: pointer;
+    transition: 1s
+}
+
+.start_btn button:hover{
+    background-color: purple;
+    color: #F5F5F5;
+    padding: 20px 40px;
+    box-shadow: 0px 5px 10px pink, 5px 0px 20px purple ;
+    transition: 1s;
+    cursor: pointer;
 }
 
 .info_box{
@@ -82,7 +92,7 @@ body{
 
 .info_box .info-list .info span{
     font-weight: 600;
-    color: #007bff;
+    color: #004085;
 }
 .info_box .buttons{
     height: 60px;
@@ -96,14 +106,14 @@ body{
 .info_box .buttons button{
     margin: 0 5px;
     height: 40px;
-    width: 100px;
+    width: 150px;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
     border: none;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #007bff;
+    border: 1px solid #004085;
     transition: all 0.3s ease;
 }
 
@@ -137,7 +147,7 @@ body{
 
 .quiz_box header .timer{
     color: #004085;
-    background: #cce5ff;
+    background: #ee63632d;
     border: 1px solid #b8daff;
     height: 45px;
     padding: 0 8px;
@@ -163,7 +173,7 @@ body{
     border-radius: 5px;
     line-height: 30px;
     text-align: center;
-    background: #343a40;
+    background: #dd0b0b;
     border: 1px solid #343a40;
     user-select: none;
 }
@@ -173,7 +183,7 @@ body{
     bottom: 0px;
     left: 0px;
     height: 3px;
-    background: #007bff;
+    background: #ff0000;
 }
 
 section{

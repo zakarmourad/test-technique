@@ -2,71 +2,112 @@
 let questions = [
     {
     numb: 1,
-    question: "What does HTML stand for?",
-    answer: "Hyper Text Markup Language",
+    question: "Comment puis-je ajouter un écouteur d'événement à un élément du DOM?",
+    answer: "element.addEventListener('event', function)",
     options: [
-      "Hyper Text Preprocessor",
-      "Hyper Text Markup Language",
-      "Hyper Text Multiple Language",
-      "Hyper Tool Multi Language"
+      "element.onEvent = function",
+      "element.event = function",
+      "element.addEventListener('event', function)",
+      "element.attachEvent('event', function)"
     ]
   },
     {
     numb: 2,
-    question: "What does CSS stand for?",
-    answer: "Cascading Style Sheet",
+    question: "Quelle est la syntaxe correcte pour sélectionner tous les éléments HTML qui ont la classe: myClass?",
+    answer: "document.getElementsByClassName('myClass')",
     options: [
-      "Common Style Sheet",
-      "Colorful Style Sheet",
-      "Computer Style Sheet",
-      "Cascading Style Sheet"
+      "document.getElementsByTagName('.myClass')",
+      "document.querySelectorAll('.myClass')",
+      "document.getElementsByClassName('myClass')",
+      "document.querySelector('.myClass')"
     ]
   },
     {
     numb: 3,
-    question: "What does PHP stand for?",
-    answer: "Hypertext Preprocessor",
+    question: "Quelle est la syntaxe correcte pour ajouter un élément à la fin d'un tableau en JavaScript?",
+    answer: "array.push(item)",
     options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor"
+      "array.add(item)",
+      "array.append(item)",
+      "array.push(item)",
+      "array.addEnd(item)"
     ]
   },
     {
     numb: 4,
-    question: "What does SQL stand for?",
-    answer: "Structured Query Language",
+    question: "Quelle est la commande SQL qui permet de supprimer une table nommée : old_table?",
+    answer: "DROP TABLE old_table;",
     options: [
-      "Stylish Question Language",
-      "Stylesheet Query Language",
-      "Statement Question Language",
-      "Structured Query Language"
+      "DELETE TABLE old_table;",
+      "DROP TABLE old_table;",
+      "TRUNCATE TABLE old_table;",
+      "REMOVE TABLE old_table;"
     ]
   },
     {
     numb: 5,
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
+    question: "Quelle commande SQL permet de trier les résultats d'une requête en ordre décroissant?",
+    answer: "ORDER BY DESC;",
     options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language"
+      "ORDER BY DESC;",
+      "SORT BY DESC;",
+      "SORT DESCENDING;",
+      "ORDER DESCENDING;"
     ]
   },
-  // you can uncomment the below codes and make duplicate as more as you want to add question
-  // but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....
-
-  //   {
-  //   numb: 6,
-  //   question: "Your Question is Here",
-  //   answer: "Correct answer of the question is here",
-  //   options: [
-  //     "Option 1",
-  //     "option 2",
-  //     "option 3",
-  //     "option 4"
-  //   ]
-  // },
+  {
+    numb: 6,
+    question: "Quelle est la commande SQL pour mettre à jour l'enregistrement avec l'ID 1 dans la table 'Customers'?",
+    answer: "UPDATE Customers SET Name = 'John Smith' WHERE ID = 1",
+    options: [
+      "CHANGE Customers SET Name = 'John Smith' WHERE ID = 1",
+      "MODIFY Customers SET Name = 'John Smith' WHERE ID = 1",
+      "EDIT Customers SET Name = 'John Smith' WHERE ID = 1",
+      "UPDATE Customers SET Name = 'John Smith' WHERE ID = 1"
+    ]
+  },
+  {
+    numb: 7,
+    question: "Quelle est la complexité en temps de l'algorithme de tri rapide (QuickSort) ?",
+    answer: "O(n log n)",
+    options: [
+      "O(n log n)",
+      "O(n^2)",
+      "O(n)",
+      "O(1)"
+    ]
+  },
+  {
+    numb: 8,
+    question: "Quelle est la structure de données en C++ qui permet de stocker une collection d'objets de différents types ?",
+    answer: "Liste",
+    options: [
+      "Tableau",
+      "Liste",
+      "Pile",
+      "File"
+    ]
+  },
+  {
+    numb: 9,
+    question: "Quelle est la structure de données en C++ qui permet de stocker une collection d'objets de même type, dans un ordre précis, et qui permet l'accès rapide à n'importe quel élément par son index ?",
+    answer: "Tableau",
+    options: [
+      "Liste",
+      "Tableau",
+      "File",
+      "Pile"
+    ]
+  },
+  {
+    numb: 10,
+    question: "Quel algorithme utiliseriez-vous pour trouver le nombre minimal de couleurs nécessaires pour colorier un graphe, de sorte qu'aucun sommet adjacent ne soit de la même couleur ?",
+    answer: "Algorithme de Welsh-Powell",
+    options: [
+      "Tri par insertion",
+      "Algorithme de Dijkstra",
+      "Algorithme de Tri sort",
+      "Algorithme de Welsh-Powell"
+    ]
+  }
 ];

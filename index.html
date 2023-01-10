@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal - www.codingnepalweb.com -->
-<!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test technique</title>
     <link rel="stylesheet" href="style.css">
-    <!-- FontAweome CDN Link for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-    <!-- start Quiz button -->
+
+    <div class="message">Bienvenue sur notre application de test de connaissances en programmation ! Avec ce test, vous pourrez évaluer vos connaissances en JavaScript, SQL et C++. Ce test comprend 10 questions, qui vous permettront de mettre en pratique vos connaissances et de voir les domaines où vous pouvez améliorer. Que vous soyez débutant ou expérimenté, ce test est une excellente occasion pour évaluer vos compétences en programmation. Bonne chance !</div>
+    <!-- Pour démarer le quiz-->
     <div class="start_btn"><button>Démarer le test</button></div>
 
-    <!-- Info Box -->
+    <!-- Section de règle -->
     <div class="info_box">
         <div class="info-title"><span>Voici quelques règles de ce quiz.</span></div>
         <div class="info-list">
@@ -30,7 +29,7 @@
         </div>
     </div>
 
-    <!-- Quiz Box -->
+    <!-- Section du test -->
     <div class="quiz_box">
         <header>
             <div class="title">Test technique</div>
@@ -41,42 +40,28 @@
             <div class="time_line"></div>
         </header>
         <section>
-            <div class="que_text">
-                <!-- Here I've inserted question from JavaScript -->
-            </div>
-            <div class="option_list">
-                <!-- Here I've inserted options from JavaScript -->
-            </div>
+            <div class="que_text"></div>
+            <div class="option_list"></div>
         </section>
-
-        <!-- footer of Quiz Box -->
         <footer>
-            <div class="total_que">
-                <!-- Here I've inserted Question Count Number from JavaScript -->
-            </div>
+            <div class="total_que"></div>
             <button class="next_btn">Suivant</button>
         </footer>
     </div>
 
-    <!-- Result Box -->
     <div class="result_box">
         <div class="icon">
             <i class="fa-question"></i>
         </div>
         <div class="complete_text">Vous avez terminer le test!</div>
-        <div class="score_text">
-            <!-- Here I've inserted Score Result from JavaScript -->
-        </div>
+        <div class="score_text"></div>
         <div class="buttons">
             <button class="restart">Repasser le test</button>
             <button class="quit">Sortir</button>
         </div>
     </div>
 
-    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
     <script src="questions.js"></script>
-
-    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
     <script src="script.js"></script>
 
 </body>

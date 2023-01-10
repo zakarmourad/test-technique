@@ -51,10 +51,10 @@ body{
 }
 
 .start_btn button:hover{
-    background-color: purple;
+    background-color: #0263ca;
     color: #F5F5F5;
     padding: 20px 40px;
-    box-shadow: 0px 5px 10px pink, 5px 0px 20px purple ;
+    box-shadow: 0px 5px 10px pink, 5px 0px 20px #0263ca ;
     transition: 1s;
     cursor: pointer;
 }
@@ -390,4 +390,11 @@ footer button.show{
 .buttons button.quit:hover{
     color: #fff;
     background: #007bff;
+}
+
+.message{
+background-color: #0263ca;
+color: #F5F5F5;
+padding: 50px;
+text-align: center;
 }
